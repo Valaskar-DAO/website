@@ -71,10 +71,12 @@ export default function Home() {
                 powered by blockchain. Built around a flagship AAA survival
                 game.
               </p>
-              <div className="hero-buttons">
-                <a href="#" target="_blank" className="button">
-                  <div className="dots_border" />
-                  <span className="text_button">Read White Paper</span>
+              <div className="hero-buttons"> 
+                <a href="#" target="_blank" className="btn btn-primary">
+                  Read White Paper
+                </a>
+                <a href="#about" className="btn btn-outline">
+                  Read More
                 </a>
               </div>
             </div>
@@ -386,7 +388,7 @@ export default function Home() {
                   </div>
                   <div className="prop-item">
                     <span className="prop-label">Pioneer Reward</span>
-                    <span className="prop-value">75,000 VALA / NFT</span>
+                    <span className="prop-value">75,04400 VALA / NFT</span>
                   </div>
                   <div className="prop-item">
                     <span className="prop-label">Revenue Split</span>
@@ -417,30 +419,30 @@ export default function Home() {
               </p>
             </div>
             <div className="gov-flow">
+
+              <div className="gov-moving-line"></div>
+
+
               <div className="gov-step">
                 <div className="gov-step-num">1</div>
                 <h4>Propose</h4>
                 <p>Backed by 25+ Passports</p>
-              </div>
-              <div className="gov-arrow">&rarr;</div>
+              </div> 
               <div className="gov-step">
                 <div className="gov-step-num">2</div>
                 <h4>4h Delay</h4>
                 <p>Waiting period before vote</p>
-              </div>
-              <div className="gov-arrow">&rarr;</div>
+              </div> 
               <div className="gov-step">
                 <div className="gov-step-num">3</div>
                 <h4>2d Vote</h4>
                 <p>FOR must exceed AGAINST</p>
-              </div>
-              <div className="gov-arrow">&rarr;</div>
+              </div> 
               <div className="gov-step">
                 <div className="gov-step-num">4</div>
                 <h4>24h Timelock</h4>
                 <p>Review period before execution</p>
-              </div>
-              <div className="gov-arrow">&rarr;</div>
+              </div> 
               <div className="gov-step">
                 <div className="gov-step-num">5</div>
                 <h4>Execute</h4>

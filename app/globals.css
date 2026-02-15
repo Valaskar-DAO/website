@@ -240,6 +240,19 @@ main {
     color: #000;
 }
 
+.btn-outline {
+    color: #ffffffb3;
+    border: 1px solid;
+    border-color: rgba(255,255,255,0.5);
+    background: transparent;
+    transition: border-color .3s;
+ }
+
+.btn-outline:hover {
+    color: #fff;  
+    border-color: rgba(255,255,255,1);
+}
+
 .hero {
     padding: 170px 0 170px;
     position: relative;
@@ -329,7 +342,7 @@ main {
     color: #ffffffb3;
     border: 1px solid rgba(255,255,255,0.5);
     background: transparent;
-    transition: all .3s;
+    transition: border-color .3s , color .3s;
 }
 
 .btn-outline:hover {
@@ -577,14 +590,27 @@ main {
 /* ============ DAO Governance ============ */
 
 .gov-flow {
+    position: relative;
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    gap: 16px;
+    gap: 60px;
     margin-bottom: 48px;
     flex-wrap: wrap;
 }
 
+
+.gov-moving-line {
+    z-index: -1;
+    height: 2px;
+    position: absolute;
+    top: 19px;
+    left: 172px;
+    right: 167px;
+    overflow: hidden;
+    background: #1e1e1e;
+}
+ 
 .gov-step {
     text-align: center;
     min-width: 120px;
@@ -594,7 +620,7 @@ main {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: rgb(255 255 255 / 6%);
+    background: #1e1e1e;
     color: #ffffff;
     display: inline-flex;
     align-items: center;
@@ -614,12 +640,7 @@ main {
     font-size: 0.82rem;
     color: #ffffff60;
 }
-
-.gov-arrow {
-    font-size: 1.4rem;
-    color: #ffffff30;
-    margin-top: 8px;
-}
+ 
 
 .gov-details {
     display: grid;
