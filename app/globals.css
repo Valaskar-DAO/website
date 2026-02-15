@@ -198,6 +198,7 @@ main {
     font-weight: 400;
     transition: all .2s;
     position: relative;
+    white-space: nowrap;
 }
 
 .nav a:hover {
