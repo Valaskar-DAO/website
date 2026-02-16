@@ -314,7 +314,7 @@ main {
     left: 0;
     right: 0;
     background:
-        radial-gradient(660px 560px at calc(50% - 800px) 0%, rgb(0 150 136 / 16%) 0%, rgb(0 150 136 / 8%) 35%, rgb(0 150 136 / 0%) 100%),
+        radial-gradient(1470px 560px at calc(50% - 680px) 0%, rgb(0 150 136 / 16%) 0%, rgb(0 150 136 / 8%) 35%, rgb(0 150 136 / 0%) 100%),
         radial-gradient(460px 460px at calc(50% + 1000px) 1129px, rgb(0 150 136 / 16%) 0%, rgb(0 150 136 / 8%) 35%, rgb(0 150 136 / 0%) 100%),
         radial-gradient(560px 260px at calc(50% + 0px) 2700px, rgb(255 255 255 / 8%) 0%, rgb(255 255 255 / 4%) 35%, rgb(255 255 255 / 0%) 100%),
         radial-gradient(660px 560px at calc(50% - 900px) 3529px, rgb(0 150 136 / 10%) 0%, rgb(0 150 136 / 5%) 35%, rgb(0 150 136 / 0%) 100%);
