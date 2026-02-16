@@ -4,13 +4,13 @@ export default function ProductsSection({ dict }: { dict: Dictionary["products"]
   return (
     <section className="section" id="features">
       <div className="container">
-        <div className="section-header">
+        <div className="section-header" data-aos="fade-up">
           <p className="section-tag">{dict.tag}</p>
           <h2>{dict.title}</h2>
           <p className="section-sub">{dict.subtitle}</p>
         </div>
         <div className="products-grid">
-          <div className="product-card">
+          <div className="product-card" data-aos="fade-up" data-aos-delay="0">
             <div className="product-icon">
               <svg
                 width="24"
@@ -28,7 +28,7 @@ export default function ProductsSection({ dict }: { dict: Dictionary["products"]
             <h3>{dict.valaWorldTitle}</h3>
             <p>{dict.valaWorldDesc}</p>
           </div>
-          <div className="product-card">
+          <div className="product-card" data-aos="fade-up" data-aos-delay="100">
             <div className="product-icon">
               <svg
                 width="24"
@@ -45,7 +45,7 @@ export default function ProductsSection({ dict }: { dict: Dictionary["products"]
             <h3>{dict.valaStudioTitle}</h3>
             <p>{dict.valaStudioDesc}</p>
           </div>
-          <div className="product-card">
+          <div className="product-card" data-aos="fade-up" data-aos-delay="200">
             <div className="product-icon">
               <svg
                 width="24"
@@ -63,7 +63,7 @@ export default function ProductsSection({ dict }: { dict: Dictionary["products"]
             <h3>{dict.valaTokenTitle}</h3>
             <p>{dict.valaTokenDesc}</p>
           </div>
-          <div className="product-card">
+          <div className="product-card" data-aos="fade-up" data-aos-delay="300">
             <div className="product-icon">
               <svg
                 width="24"
@@ -80,7 +80,7 @@ export default function ProductsSection({ dict }: { dict: Dictionary["products"]
             <h3>{dict.passportTitle}</h3>
             <p>{dict.passportDesc}</p>
           </div>
-          <div className="product-card">
+          <div className="product-card" data-aos="fade-up" data-aos-delay="400">
             <div className="product-icon">
               <svg
                 width="24"
@@ -98,7 +98,7 @@ export default function ProductsSection({ dict }: { dict: Dictionary["products"]
             <h3>{dict.walletTitle}</h3>
             <p>{dict.walletDesc}</p>
           </div>
-          <div className="product-card">
+          <div className="product-card" data-aos="fade-up" data-aos-delay="500">
             <div className="product-icon">
               <svg
                 width="24"

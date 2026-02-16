@@ -4,40 +4,40 @@ export default function FAQSection({ dict }: { dict: Dictionary["faq"] }) {
   return (
     <section className="section" id="faq">
       <div className="container">
-        <div className="section-header">
+        <div className="section-header" data-aos="fade-up">
           <p className="section-tag">{dict.tag}</p>
           <h2>{dict.title}</h2>
         </div>
         <div className="faq-list">
-          <details className="faq-item">
+          <details className="faq-item" data-aos="fade-up" data-aos-delay="0">
             <summary>{dict.q1}</summary>
             <p>{dict.a1}</p>
           </details>
-          <details className="faq-item">
+          <details className="faq-item" data-aos="fade-up" data-aos-delay="50">
             <summary>{dict.q2}</summary>
             <p>{dict.a2}</p>
           </details>
-          <details className="faq-item">
+          <details className="faq-item" data-aos="fade-up" data-aos-delay="100">
             <summary>{dict.q3}</summary>
             <p>{dict.a3}</p>
           </details>
-          <details className="faq-item">
+          <details className="faq-item" data-aos="fade-up" data-aos-delay="150">
             <summary>{dict.q4}</summary>
             <p>{dict.a4}</p>
           </details>
-          <details className="faq-item">
+          <details className="faq-item" data-aos="fade-up" data-aos-delay="200">
             <summary>{dict.q5}</summary>
             <p>{dict.a5}</p>
           </details>
-          <details className="faq-item">
+          <details className="faq-item" data-aos="fade-up" data-aos-delay="250">
             <summary>{dict.q6}</summary>
             <p>{dict.a6}</p>
           </details>
-          <details className="faq-item">
+          <details className="faq-item" data-aos="fade-up" data-aos-delay="300">
             <summary>{dict.q7}</summary>
             <p>{dict.a7}</p>
           </details>
-          <details className="faq-item">
+          <details className="faq-item" data-aos="fade-up" data-aos-delay="350">
             <summary>{dict.q8}</summary>
             <p>{dict.a8}</p>
           </details>

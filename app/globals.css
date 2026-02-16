@@ -443,6 +443,12 @@ main {
     border-radius: 14px;
     padding: 28px 24px;
     text-align: center;
+    transition: border-color .3s, transform .3s;
+}
+
+.stat-card:hover {
+    border-color: #ffffff24;
+    transform: translateY(-3px);
 }
 
 .stat-number {
@@ -546,6 +552,12 @@ main {
     display: flex;
     flex-direction: column;
     gap: 4px;
+    transition: border-color .3s, transform .3s;
+}
+
+.prop-item:hover { 
+    border-color: #ffffff24;
+    transform: translateY(-3px);
 }
 
 .prop-label {
@@ -595,6 +607,12 @@ main {
     border: 1px solid rgba(255,255,255,0.06);
     border-radius: 16px;
     padding: 32px 24px;
+    transition: border-color .3s, transform .3s;
+}
+
+.token-card:hover {
+    border-color: #ffffff24;
+    transform: translateY(-6px);
 }
 
 .token-pct {

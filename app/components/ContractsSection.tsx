@@ -5,12 +5,12 @@ export default function ContractsSection({ dict }: { dict: Dictionary["contracts
   return (
     <section className="section" id="contracts">
       <div className="container">
-        <div className="section-header">
+        <div className="section-header" data-aos="fade-up">
           <p className="section-tag">{dict.tag}</p>
           <h2>{dict.title}</h2>
           <p className="section-sub">{dict.subtitle}</p>
         </div>
-        <div className="contracts-table">
+        <div className="contracts-table" data-aos="fade-up" data-aos-delay="100">
           <div className="contract-row">
             <span className="contract-name">{dict.valaErc20}</span>
             <a

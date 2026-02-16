@@ -6,16 +6,16 @@ export default function HeroSection({ dict }: { dict: Dictionary["hero"] }) {
     <section className="hero" id="hero">
       <div className="container">
         <div className="hero-content">
-          <h1>
+          <h1 data-aos="fade-down" data-aos-delay="100">
             {dict.titleLine1} <br />
             {dict.titleLine2}
           </h1>
-          <p className="subtitle">
+          <p className="subtitle" data-aos="fade-up" data-aos-delay="200">
             {dict.subtitleLine1}
             <br />
             {dict.subtitleLine2}
           </p>
-          <div className="hero-buttons">
+          <div className="hero-buttons" data-aos="fade-up" data-aos-delay="300">
             <a href="/white-paper.pdf" target="_blank" className="btn btn-primary">
               {dict.whitePaper}
               <span className="lefticon">
@@ -28,7 +28,7 @@ export default function HeroSection({ dict }: { dict: Dictionary["hero"] }) {
            
           </div>
  
-          <div className="scroll-down-box">
+          <div className="scroll-down-box" data-aos="fade-up" data-aos-delay="500">
             <a href="#about" className="scroll-down">
               <div className="mouse-icon">
                 <div className="mouse-wheel"></div>

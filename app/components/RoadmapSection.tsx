@@ -4,13 +4,13 @@ export default function RoadmapSection({ dict }: { dict: Dictionary["roadmap"] }
   return (
     <section className="section" id="roadmap">
       <div className="container">
-        <div className="section-header">
+        <div className="section-header" data-aos="fade-up">
           <p className="section-tag">{dict.tag}</p>
           <h2>{dict.title}</h2>
           <p className="section-sub">{dict.subtitle}</p>
         </div>
         <div className="roadmap-timeline">
-          <div className="roadmap-item active">
+          <div className="roadmap-item active" data-aos="fade-left" data-aos-delay="0">
             <div className="roadmap-date">Q1 2026</div>
             <div className="roadmap-content">
               <span className="roadmap-phase">Phase 0</span>
@@ -18,7 +18,7 @@ export default function RoadmapSection({ dict }: { dict: Dictionary["roadmap"] }
               <p>{dict.phase0Desc}</p>
             </div>
           </div>
-          <div className="roadmap-item active">
+          <div className="roadmap-item active" data-aos="fade-left" data-aos-delay="100">
             <div className="roadmap-date">Q2 2026</div>
             <div className="roadmap-content">
               <span className="roadmap-phase">Phase 1</span>
@@ -26,7 +26,7 @@ export default function RoadmapSection({ dict }: { dict: Dictionary["roadmap"] }
               <p>{dict.phase1Desc}</p>
             </div>
           </div>
-          <div className="roadmap-item active">
+          <div className="roadmap-item active" data-aos="fade-left" data-aos-delay="200">
             <div className="roadmap-date">Q3 2026</div>
             <div className="roadmap-content">
               <span className="roadmap-phase">Phase 2</span>
@@ -34,7 +34,7 @@ export default function RoadmapSection({ dict }: { dict: Dictionary["roadmap"] }
               <p>{dict.phase2Desc}</p>
             </div>
           </div>
-          <div className="roadmap-item">
+          <div className="roadmap-item" data-aos="fade-left" data-aos-delay="0">
             <div className="roadmap-date">Q4 2026</div>
             <div className="roadmap-content">
               <span className="roadmap-phase">Phase 3</span>
@@ -42,7 +42,7 @@ export default function RoadmapSection({ dict }: { dict: Dictionary["roadmap"] }
               <p>{dict.phase3Desc}</p>
             </div>
           </div>
-          <div className="roadmap-item">
+          <div className="roadmap-item" data-aos="fade-left" data-aos-delay="100">
             <div className="roadmap-date">Q1 2027</div>
             <div className="roadmap-content">
               <span className="roadmap-phase">Phase 4</span>
@@ -50,7 +50,7 @@ export default function RoadmapSection({ dict }: { dict: Dictionary["roadmap"] }
               <p>{dict.phase4Desc}</p>
             </div>
           </div>
-          <div className="roadmap-item">
+          <div className="roadmap-item" data-aos="fade-left" data-aos-delay="200">
             <div className="roadmap-date">Q2 2027</div>
             <div className="roadmap-content">
               <span className="roadmap-phase">Phase 5</span>
@@ -58,7 +58,7 @@ export default function RoadmapSection({ dict }: { dict: Dictionary["roadmap"] }
               <p>{dict.phase5Desc}</p>
             </div>
           </div>
-          <div className="roadmap-item">
+          <div className="roadmap-item" data-aos="fade-left" data-aos-delay="0">
             <div className="roadmap-date">Q3 2027</div>
             <div className="roadmap-content">
               <span className="roadmap-phase">Phase 6 &amp; 7</span>
@@ -66,7 +66,7 @@ export default function RoadmapSection({ dict }: { dict: Dictionary["roadmap"] }
               <p>{dict.phase6Desc}</p>
             </div>
           </div>
-          <div className="roadmap-item">
+          <div className="roadmap-item" data-aos="fade-left" data-aos-delay="100">
             <div className="roadmap-date">Q4 2027</div>
             <div className="roadmap-content">
               <span className="roadmap-phase">Phase 8</span>
@@ -74,7 +74,7 @@ export default function RoadmapSection({ dict }: { dict: Dictionary["roadmap"] }
               <p>{dict.phase7Desc}</p>
             </div>
           </div>
-          <div className="roadmap-item">
+          <div className="roadmap-item" data-aos="fade-left" data-aos-delay="200">
             <div className="roadmap-date">Q1 2028</div>
             <div className="roadmap-content">
               <span className="roadmap-phase">Phase 9</span>

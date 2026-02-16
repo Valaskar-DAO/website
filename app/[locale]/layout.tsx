@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "../globals.css";
 import ScrollBehavior from "../components/ScrollBehavior";
+import AOSInit from "../components/AOSInit";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { i18n, type Locale } from "../i18n/config";
@@ -48,6 +49,7 @@ export default async function LocaleLayout({
         }}
       />
       <ScrollBehavior />
+      <AOSInit />
         
         {children}  
         <Footer dict={dict.footer} />

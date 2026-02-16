@@ -8,13 +8,13 @@ export default function PassportSection({ dict }: { dict: Dictionary["passport"]
   return (
     <section className="section" id="passport">
       <div className="container">
-        <div className="section-header">
+        <div className="section-header" data-aos="fade-up">
           <p className="section-tag">{dict.tag}</p>
           <h2>{dict.title}</h2>
           <p className="section-sub">{dict.subtitle}</p>
         </div>
         <div className="passport-layout">
-          <div className="passport-image">
+          <div className="passport-image" data-aos="fade-right" data-aos-delay="100">
             <Tilt
               tiltMaxAngleX={15}
               tiltMaxAngleY={15}
@@ -34,7 +34,7 @@ export default function PassportSection({ dict }: { dict: Dictionary["passport"]
               />
             </Tilt>
           </div>
-          <div className="passport-info">
+          <div className="passport-info" data-aos="fade-left" data-aos-delay="200">
             <p className="passport-desc">{dict.description}</p>
             <div className="passport-props">
               <div className="prop-item">
