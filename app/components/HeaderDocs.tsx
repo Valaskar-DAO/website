@@ -11,9 +11,9 @@ export default function HeaderDocs({
   locale: Locale;
 }) {
   return (
-        <header className="header">
+        <header className="header wp-header-fixed">
           <div className="container header-inner">
-            <a href="#hero" className="logo">
+            <a href="/" className="logo">
               <ValaskarLogo />
               <span>Valaskar</span>
             </a>

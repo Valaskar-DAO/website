@@ -23,10 +23,19 @@ export default function HeroSection({ dict }: { dict: Dictionary["hero"] }) {
               </span> 
             </a>
             <a href="/docs" target="_blank" className="btn btn-outline">
-              {dict.readMore}
+              {dict.documentation}
             </a>
            
           </div>
+ 
+          <div className="scroll-down-box">
+            <a href="#about" className="scroll-down">
+              <div className="mouse-icon">
+                <div className="mouse-wheel"></div>
+              </div>
+            </a>
+          </div>
+
         </div>
       </div>
     </section>

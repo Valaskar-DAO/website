@@ -19,7 +19,9 @@
     "subtitleLine1": "Um mundo virtual descentralizado de 10.000 terras independentes,",
     "subtitleLine2": "alimentado por blockchain. Construído em torno de um jogo de sobrevivência AAA principal.",
     "whitePaper": "Ler White Paper",
-    "readMore": "Saiba mais"
+    "readMore": "Saiba mais", 
+    "documentation": "Documentação"
+
   },
   "about": {
     "tag": "Sobre",

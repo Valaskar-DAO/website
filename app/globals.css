@@ -153,6 +153,7 @@ main {
     transition: all .4s ease;
     background: rgba(255, 255, 255, 0);
     backdrop-filter: blur(10px);
+    padding: 6px 25px;
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -187,7 +188,7 @@ main {
 .nav {
     display: flex;
     gap: 25px;
-    padding: 6px 25px;
+    padding: 0;
     border-radius: 90px;
     position: relative;
 }
@@ -275,7 +276,7 @@ main {
 }
 
 .hero {
-    padding: 170px 0 170px;
+    padding: 230px 0 60px 0;
     position: relative;
     overflow: hidden;
 }
@@ -1219,6 +1220,7 @@ main {
 
 .wp-header-fixed {
     background: transparent; 
+    position: absolute;
     border-bottom: 1px solid rgba(255,255,255,0.06) !important;
 }
 
@@ -1231,7 +1233,7 @@ main {
     display: flex;
     max-width: 1280px;
     margin: 0 auto;
-    padding: 100px 24px 80px;
+    padding: 82px 24px 80px;
     gap: 0;
     position: relative;
 }
@@ -1245,10 +1247,11 @@ main {
 
 .wp-sidebar-inner {
     position: sticky;
-    top: 90px;
+    top: 0px;
     max-height: calc(100vh - 120px);
     overflow-y: auto;
     padding-right: 24px;
+    padding-top: 24px;
     padding-bottom: 24px;
     scrollbar-width: thin;
     scrollbar-color: rgba(255,255,255,0.1) transparent;
@@ -1320,6 +1323,7 @@ main {
 .wp-content {
     flex: 1;
     min-width: 0;
+    padding-top: 24px;
     padding-left: 48px;
     border-left: 1px solid rgba(255,255,255,0.06);
 }
@@ -1898,3 +1902,57 @@ main {
     }
 }
 
+
+
+
+/* ============ Scroll Down Mouse Icon ============ */
+
+.scroll-down-box { 
+    margin-top: 190px;
+    display: flex;
+    justify-content: center;
+}
+
+.scroll-down {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.mouse-icon {
+    width: 26px;
+    height: 42px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    padding-top: 8px;
+    transition: border-color 0.3s;
+}
+
+.scroll-down:hover .mouse-icon {
+    border-color: rgba(255, 255, 255, 0.7);
+}
+
+.mouse-wheel {
+    width: 4px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 2px;
+    animation: scrollWheel 1.8s ease-in-out infinite;
+}
+
+@keyframes scrollWheel {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 0.4;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
