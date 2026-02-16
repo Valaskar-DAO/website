@@ -20,7 +20,7 @@ export default function PassportSection({ dict }: { dict: Dictionary["passport"]
               tiltMaxAngleY={15}
               glareEnable={true}
               glareMaxOpacity={0.25}
-              glareColor="#000000"
+              glareColor="#ffffff"
               glarePosition="all"
               scale={1.05}
               transitionSpeed={400}
