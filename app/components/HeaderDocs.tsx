@@ -17,11 +17,10 @@ export default function HeaderDocs({
               <ValaskarLogo />
               <span>Valaskar</span>
             </a>
-            
-
+             
             <div className="header-actions">
-                <a href="#passport" className="btn btn-primary btn-sm">
-                    {dict.getPassport}
+                <a href="/" className="btn btn-primary btn-sm">
+                    {dict.backToHome}
                 </a>
                 <LanguageSwitcher locale={locale} />
 
