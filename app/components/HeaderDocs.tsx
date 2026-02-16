@@ -23,7 +23,7 @@ export default function HeaderDocs({
             <DocsSearch />
              
             <div className="header-actions">
-                <a href="/" className="btn btn-primary btn-sm">
+                <a href="/" className="btn btn-primary backicon">
                     <span>
                       <ArrowIcon />
                     </span> 

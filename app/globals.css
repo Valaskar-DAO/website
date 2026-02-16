@@ -255,18 +255,31 @@ main {
     display: inline-flex;
     margin-right: -10px;
 }
-
-.btn-primary span.backicon {
-    margin-left: -10px;
-    transform: rotate(180deg);
-    margin-right: unset;
-}
-
+ 
 .btn-primary span svg {
     color: #fff;
     height: 16px;
     width: 16px; 
 }
+
+
+.btn-primary.backicon {
+    padding: 6px 17px;
+}
+
+.btn-primary.backicon span {
+    margin-left: -10px;
+    margin-right: unset;
+    transform: rotate(180deg); 
+    width: 24px;
+    height: 24px; 
+}
+
+.btn-primary.backicon span svg { 
+    height: 16px;
+    width: 16px; 
+}
+
 
 .btn-outline {
     color: #ffffffb3;
@@ -1358,7 +1371,7 @@ mark.docs-search-highlight {
     display: flex;
     max-width: 1280px;
     margin: 0 auto;
-    padding: 82px 24px 80px;
+    padding: 82px 24px 0px;
     gap: 0;
     position: relative;
 }
