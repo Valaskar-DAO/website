@@ -47,8 +47,8 @@ export default async function LocaleLayout({
           __html: `document.documentElement.lang = '${locale}';`,
         }}
       />
-      <ScrollBehavior />
-      <AOSInit />
+        <ScrollBehavior />
+        <AOSInit />
         
         {children}  
         <Footer dict={dict.footer} />
