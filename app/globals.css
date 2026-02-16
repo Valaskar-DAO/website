@@ -1386,7 +1386,7 @@ mark.docs-search-highlight {
 .wp-sidebar-inner {
     position: sticky;
     top: 0px;
-    max-height: calc(100vh - 120px);
+    max-height: calc(100vh - 0px);
     overflow-y: auto;
     padding-right: 24px;
     padding-top: 24px;

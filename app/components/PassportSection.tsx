@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import Tilt from "react-parallax-tilt";
 import type { Dictionary } from "../i18n/get-dictionary";
 
 export default function PassportSection({ dict }: { dict: Dictionary["passport"] }) {
@@ -12,13 +15,24 @@ export default function PassportSection({ dict }: { dict: Dictionary["passport"]
         </div>
         <div className="passport-layout">
           <div className="passport-image">
-            <Image
-              src="/valaskar-pasport.webp"
-              alt="Valaskar Passport NFT"
-              width={467}
-              height={467}
-              priority
-            />
+            <Tilt
+              tiltMaxAngleX={15}
+              tiltMaxAngleY={15}
+              glareEnable={true}
+              glareMaxOpacity={0.25}
+              glareColor="#000000"
+              glarePosition="all"
+              scale={1.05}
+              transitionSpeed={400}
+            >
+              <Image
+                src="/valaskar-pasport.webp"
+                alt="Valaskar Passport NFT"
+                width={467}
+                height={467}
+                priority
+              />
+            </Tilt>
           </div>
           <div className="passport-info">
             <p className="passport-desc">{dict.description}</p>
