@@ -18,7 +18,7 @@ export default function HeroSection({ dict }: { dict: Dictionary["hero"] }) {
           <div className="hero-buttons">
             <a href="/white-paper.pdf" target="_blank" className="btn btn-primary">
               {dict.whitePaper}
-              <span>
+              <span className="lefticon">
                 <ArrowIcon />
               </span> 
             </a>

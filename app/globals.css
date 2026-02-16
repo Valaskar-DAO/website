@@ -256,6 +256,12 @@ main {
     margin-right: -10px;
 }
 
+.btn-primary span.backicon {
+    margin-left: -10px;
+    transform: rotate(180deg);
+    margin-right: unset;
+}
+
 .btn-primary span svg {
     color: #fff;
     height: 16px;
@@ -1224,6 +1230,125 @@ main {
     border-bottom: 1px solid rgba(255,255,255,0.06) !important;
 }
 
+/* ── Docs Search ── */
+.docs-search-wrapper {
+    position: relative;
+    flex: 1;
+    max-width: 360px;
+    margin: 0 24px;
+}
+
+.docs-search-input-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 6px 12px;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.docs-search-input-box:focus-within {
+    border-color: rgba(255,255,255,0.25);
+    background: rgba(255,255,255,0.1);
+}
+
+.docs-search-icon {
+    flex-shrink: 0;
+    color: rgba(255,255,255,0.4);
+}
+
+.docs-search-input {
+    flex: 1;
+    background: none;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 0.875rem;
+    font-family: inherit;
+    min-width: 0;
+}
+
+.docs-search-input::placeholder {
+    color: rgba(255,255,255,0.35);
+}
+
+.docs-search-kbd {
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.3);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 4px;
+    padding: 1px 5px;
+    font-family: inherit;
+    line-height: 1.4;
+    flex-shrink: 0;
+    background: rgba(255,255,255,0.04);
+}
+
+.docs-search-dropdown {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    right: 0;
+    background: #202020;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    max-height: 320px;
+    overflow-y: auto;
+    z-index: 200;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+    padding: 6px;
+}
+
+.docs-search-result {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    width: 100%;
+    text-align: left;
+    padding: 10px 12px;
+    border: none;
+    background: none;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.15s;
+}
+
+.docs-search-result:hover {
+    background: rgba(255,255,255,0.08);
+}
+
+.docs-search-result-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.docs-search-result-snippet {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.45);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.docs-search-empty {
+    padding: 16px 12px;
+    text-align: center;
+    color: rgba(255,255,255,0.35);
+    font-size: 0.85rem;
+}
+
+mark.docs-search-highlight {
+    background: rgba(255, 196, 0, 0.35);
+    color: inherit;
+    border-radius: 2px;
+    padding: 0 1px;
+}
+
 .wp-main {
     position: relative;
     min-height: 100vh;
@@ -1830,6 +1955,15 @@ main {
 }
 
 @media (max-width: 768px) {
+    .docs-search-wrapper {
+        max-width: 180px;
+        margin: 0 12px;
+    }
+
+    .docs-search-kbd {
+        display: none;
+    }
+
     .wp-hero h1 {
         font-size: 1.6rem;
     }
