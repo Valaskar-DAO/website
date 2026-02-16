@@ -16,15 +16,15 @@ export default async function WhitePaperPage({
   return ( 
     <>
         <HeaderDocs dict={dict.nav} locale={locale} /> 
-          <main>
-            <div className="hero-bg" />
-            <div className="wp-layout">
-              <WhitePaperSidebar sections={dict.whitePaper.sections} />
-              <article className="wp-content">
-                <WhitePaperContent dict={dict.whitePaper} />
-              </article>
-            </div>
-          </main>  
+        <main>
+          <div className="hero-bg" />
+          <div className="wp-layout">
+            <WhitePaperSidebar sections={dict.whitePaper.sections} />
+            <article className="wp-content">
+              <WhitePaperContent dict={dict.whitePaper} />
+            </article>
+          </div>
+        </main>  
     </>
    );
 }
