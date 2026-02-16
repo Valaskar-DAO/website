@@ -16,15 +16,16 @@ export default function HeroSection({ dict }: { dict: Dictionary["hero"] }) {
             {dict.subtitleLine2}
           </p>
           <div className="hero-buttons">
-            <a href="#" target="_blank" className="btn btn-primary">
+            <a href="/white-paper.pdf" target="_blank" className="btn btn-primary">
               {dict.whitePaper}
               <span>
                 <ArrowIcon />
               </span> 
             </a>
-            <a href="#about" className="btn btn-outline">
+            <a href="/docs" target="_blank" className="btn btn-outline">
               {dict.readMore}
             </a>
+           
           </div>
         </div>
       </div>

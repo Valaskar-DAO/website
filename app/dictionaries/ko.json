@@ -29,7 +29,7 @@
     "p3": "토지 소유자는 게임플레이 규칙, 콘텐츠, 수익화 모델에 대한 완전한 통제권을 유지합니다. 토지 소유권과 통제는 블록체인에서 강제되어 암호학적으로 검증 가능한 소유권을 제공합니다.",
     "statUniqueLands": "고유 토지",
     "statPlayersPerLand": "토지당 플레이어",
-    "statPerLand": "토지당 (4×4 km)",
+    "statNativeGameCurrency": "게임 내 기본 통화",
     "statAdjustableParams": "조정 가능한 매개변수"
   },
   "tokenomics": {
@@ -164,6 +164,308 @@
     "walletDesc": "VALA 생태계 토큰 관리 및 트랜잭션 서명을 위한 브라우저 기반 지갑 확장. 플레이어에게는 선택 사항, 패스포트 보유자에게는 필수.",
     "bridgeTitle": "VALA Bridge / L2 Hub",
     "bridgeDesc": "이더리움에서 호환 L2로의 DAO 승인 전송을 위한 공식 브릿지 및 실행 레이어. 저비용, 고처리량 생태계 운영 지원."
+  },
+  "whitePaper": {
+    "title": "Valaskar Protocol White Paper",
+    "version": "Version: 0.1 (Beta)",
+    "status": "The core smart contracts of the protocol are already live on the Ethereum mainnet, including VALA (ERC-20), Valaskar Passport (ERC-721), and the DAO governance contracts such as Governor and Timelock. The game itself is still under development, along with the token's economic model, which will be introduced gradually.",
+    "sections": [
+      { "id": "executive-summary", "title": "Executive Summary", "number": "1" },
+      { "id": "platform-components", "title": "Platform Components", "number": "1.1" },
+      { "id": "vala-worlds", "title": "Valaskar: Beginning", "number": "2" },
+      { "id": "vala-token", "title": "VALA Token", "number": "3" },
+      { "id": "passports", "title": "Valaskar Passports", "number": "4" },
+      { "id": "world-map", "title": "World Map", "number": "4.1" },
+      { "id": "passport-metadata", "title": "Passport Metadata", "number": "4.2" },
+      { "id": "governance", "title": "DAO Governance", "number": "5" },
+      { "id": "guardian", "title": "Guardian & Backup", "number": "5.1" },
+      { "id": "tokenomics", "title": "Tokenomics (Detailed)", "number": "6" },
+      { "id": "public-sale", "title": "Public Token Sale", "number": "6.1" },
+      { "id": "nft-sale", "title": "NFT Sale Proceeds", "number": "6.2" },
+      { "id": "gameplay-loop", "title": "Gameplay Loop", "number": "6.3" },
+      { "id": "vala-utility", "title": "VALA Utility", "number": "6.4" },
+      { "id": "security", "title": "Security & Risk", "number": "7" },
+      { "id": "roadmap", "title": "Roadmap", "number": "8" },
+      { "id": "key-facts", "title": "Key Facts", "number": "9" },
+      { "id": "control-matrix", "title": "Control Matrix", "number": "10" },
+      { "id": "implementation", "title": "Implementation Status", "number": "11" },
+      { "id": "glossary", "title": "Glossary", "number": "12" },
+      { "id": "disclaimer", "title": "Disclaimer", "number": "13" },
+      { "id": "contract-addresses", "title": "Contract Addresses", "number": "14" }
+    ],
+    "executiveSummary": {
+      "title": "Executive Summary",
+      "p1": "Valaskar is a decentralized, blockchain-based virtual world defined by a fixed set of 10,000 independent lands, each owned by a Valaskar Passport (NFT) holder. Each land is operated by its owner and can host gameplay and social interaction for players, with a maximum of 128 concurrent players per land. Land owners retain full control over gameplay rules, content, and monetization models. Land ownership and control are enforced on the blockchain, making cryptographically verifiable ownership.",
+      "p2": "Early metaverse platforms like Decentraland and The Sandbox did not reach mass-market adoption primarily because they never shipped a single, self-sustaining flagship game product comparable in engagement and retention to successful online games. Instead of one coherent game with a clear core gameplay loop, users got a fragmented mix of uneven experiences — walkthroughs and mini-games — resulting in inconsistent production quality and weak retention dynamics.",
+      "p3": "This problem was further amplified by visual choices: a low-poly/voxel style can reduce appeal for parts of the adult audience, who often associate higher perceived value with stronger visual fidelity and production quality. This can lower conversion to regular play and limit mainstream retention.",
+      "p4": "Valaskar takes a fundamentally different approach: the ecosystem is built around a flagship, AAA 3D survival game inspired by Rust/DayZ-style post-apocalyptic PvP, built as a standalone original title, and it serves as the main entry point with frictionless onboarding (no crypto needed to start). The game has a clear, repeatable gameplay loop with measurable progression, so players keep coming back for the gameplay."
+    },
+    "platformComponents": {
+      "title": "Platform Components",
+      "intro": "Valaskar is delivered as a modular product suite centered around a flagship AAA 3D game:",
+      "items": [
+        { "name": "VALA WORLD", "desc": "Valaskar's core product is a flagship survival 3D game set in a post-apocalyptic world, targeting AAA-level production values, with hardcore survival PvP gameplay inspired by Rust and DayZ, built around scavenging, crafting, base-building, clan warfare, and territory control." },
+        { "name": "VALA STUDIO", "desc": "The official creator software used to configure and operate lands and to create 3D assets. Creators use VALA STUDIO to build land content and items, which can be distributed and traded across the ecosystem via the Marketplace." },
+        { "name": "VALA Token", "desc": "The native ERC-20 token used across the Valaskar ecosystem. It serves as the in-game currency and as the main token for protocol-wide payments, fees, and incentives." },
+        { "name": "Valaskar Passport", "desc": "A protocol-issued ERC-721 collection of 10,000 NFTs. Each NFT is a unique Passport that represents one specific land and grants on-chain administrative control to its holder." },
+        { "name": "VALA Wallet", "desc": "A browser-based wallet extension for managing the VALA ecosystem token and signing transactions. Not required for gameplay; optional for players and required for Passport holders." },
+        { "name": "Marketplace", "desc": "Web-based marketplace where world creators can list, buy, and sell ecosystem assets. It supports primary sales and peer-to-peer trading, enabling discovery, pricing, and distribution of creator-made items." },
+        { "name": "VALA Bridge / L2 Hub", "desc": "The official bridge and execution layer for DAO-approved transfers from Ethereum to an Ethereum-compatible L2, enabling low-fee, high-throughput operational payouts and ecosystem programs." }
+      ]
+    },
+    "valaWorlds": {
+      "title": "Valaskar: Beginning",
+      "p1": "Valaskar is a virtual world where ownership and governance are secured on the Ethereum blockchain and not subject to unilateral control by a platform operator. It consists of 10,000 independent game lands. Each land is uniquely identified on-chain by a unique ERC-721 identifier (1–10,000) and immutable grid coordinates (x, y), and is represented by a protocol-issued NFT Passport that cryptographically enforces ownership and administrative control.",
+      "p2": "For gamers, the main way to enter Valaskar is VALA WORLD, a AAA survival game built with Unreal Engine 5 that serves as the ecosystem's main gameplay product, featuring post-apocalyptic PvP gameplay inspired by Rust and DayZ. It is a shared multiplayer game where players choose one of 10,000 lands by its fixed coordinates (x, y) and can play and interact only with other players inside the land they select. Each land is a 4 km × 4 km (16 km²) 3D environment designed to support up to 128 concurrent players.",
+      "p3": "Land owners have full control over the content, rules, and gameplay mechanics within their land. This includes tuning progression, resource/loot rates, PvP/PvE rules, spawn logic, difficulty, and server-side modifiers. They can modify over 200 parameters, create custom game modes, and publish their land as a standalone game."
+    },
+    "valaToken": {
+      "title": "VALA Token: Distribution and Vesting",
+      "p1": "VALA is the native ERC-20 token of the Valaskar protocol deployed on Ethereum. VALA serves as the primary in-game currency and the base unit of account for protocol-level economic activity, including settlement of in-game transactions, land access fees, rewards/incentives, and other DAO-governed economic interactions.",
+      "p2": "Total VALA supply is fixed and non-inflationary, with a hard cap of 3,000,000,000 VALA enforced at the token contract level. Supply is allocated as follows: 25% to Pioneer Rewards (NFT holders), 16% to Team, 12% to Public Sale (Liquidity Pool), 47% to DAO Treasury.",
+      "unlocks": [
+        "Team allocation: 12-month cliff followed by 36-month linear vesting.",
+        "Pioneer Rewards: distributed linearly over 12 months (claim-only), split equally across all 10,000 Passport NFTs — 75,000 VALA per NFT.",
+        "Public Sale (Liquidity Pool): DAO-governed, locked for 1 month from launch; thereafter, deployment is approved by governance.",
+        "DAO Treasury: held in a DAO-controlled treasury, subject to a 6-month lockup; thereafter, distributions require governance approval, with a proposed 10-year on-chain vesting."
+      ]
+    },
+    "passports": {
+      "title": "Valaskar Passports (ERC-721 NFTs)",
+      "p1": "Valaskar Passports is a limited NFT collection of 10,000 items (ERC-721), which acts as the main digital passport in Valaskar, provides on-chain proof of ownership of a game land, and simultaneously functions as the DAO governance system. Governance rights are exclusively attached to Valaskar Passports (1 NFT = 1 vote) and the ERC-20 VALA token has no voting power.",
+      "p2": "25% of the total VALA token supply is allocated to Pioneer Rewards and distributed equally across all 10,000 Valaskar Passports: 750,000,000 VALA in total, or 75,000 VALA per Passport. To prevent structural centralization, the team's ownership is hard-limited on-chain to 200 NFTs (2% of the NFT supply).",
+      "properties": [
+        { "label": "Supply Cap", "value": "10,000 NFTs" },
+        { "label": "Land Grid", "value": "100 × 100" },
+        { "label": "Governance", "value": "1 NFT = 1 Vote (ERC721Votes)" },
+        { "label": "Default Mint Price", "value": "0.08 ETH (0.02–1 ETH bounds)" },
+        { "label": "Admin Mint Cap", "value": "200 NFTs (2%)" },
+        { "label": "Balance Cap", "value": "100 NFTs per address" },
+        { "label": "Pioneer Reward", "value": "75,000 VALA / NFT" },
+        { "label": "Revenue Split", "value": "50% DAO / 50% Team" }
+      ]
+    },
+    "worldMap": {
+      "title": "World Map",
+      "p1": "The World Map is a UI layer that visualizes the on-chain registry of 10,000 land parcels as a fixed 100×100 grid. Each parcel is addressed by coordinates (x, y) where x and y range from 1 to 100 and is represented by a unique ERC-721 TokenId (1–10,000). The contract derives coordinates directly from tokenId with no off-chain lookup tables:",
+      "p2": "Parcel addressing is enforced by Ethereum smart contracts: each Valaskar Passport (ERC-721) is bound to exactly one coordinate pair (x, y), and any client can reproduce the same map by reading the contracts."
+    },
+    "passportMetadata": {
+      "title": "Passport Preview & Metadata",
+      "p1": "Valaskar Passport is more than an NFT — it is a \"passport\"-styled digital artifact: a cover, status marker, and identity layer for a participant in the Valaskar world. The illustration is a valuable part of the collection (rarity, traits, visual edition), but it is only the human-readable representation of what is actually recorded on-chain.",
+      "p2": "While the collection is still evolving, the metadata (JSON served via tokenURI) and the image field may be updated through DAO governance. Once the design is finalized, updates can be irreversibly disabled via a freeze. After freeze, both the metadata and the image become final and immutable."
+    },
+    "governance": {
+      "title": "DAO Governance",
+      "p1": "Valaskar is governed by a DAO of Passport holders. Governance is executed on-chain, with proposals, voting, and outcomes enforced by smart contracts. Each Valaskar Passport (ERC-721) carries one vote via ERC721Votes. Voting power is measured at the proposal snapshot (the block when voting starts, after the voting delay).",
+      "p2": "To submit a proposal, it must be backed by at least 25 Passports. After submission, there is a 4-hour waiting period before voting starts. Voting then remains open for 2 days. A proposal passes if FOR votes exceed AGAINST votes. A mandatory 24-hour timelock applies before execution.",
+      "quorumTitle": "Participation Requirements (Quorum):",
+      "quorum1": "Standard proposals: participation must reach 5% of the snapshot supply, but never less than 100 votes (FOR + ABSTAIN).",
+      "quorum2": "Critical DAO-action proposals: quorum of max(5% of snapshot supply, 300), counted as FOR + ABSTAIN, and at least 300 FOR votes."
+    },
+    "guardian": {
+      "title": "Guardian and Backup",
+      "p1": "For early security, Valaskar uses a Guardian safety mechanism operated by a 3-of-5 team multisig as an operational backstop to respond quickly to early-stage incidents (e.g., governance attacks, critical bugs, or sale-flow exploits). The Guardian may veto governance proposals prior to execution, except proposals that replace or disable the Guardian or Backup.",
+      "p2": "The Guardian replacement mechanism is locked for the first 180 days after deployment. After day 180, the Guardian remains in place until the DAO replaces it via a governance vote requiring at least 1,000 YES votes. The Guardian cannot modify governance parameters, bypass timelocks, upgrade contracts, mint tokens without caps, or transfer funds to arbitrary addresses.",
+      "p3": "A separate Guardian Backup is set at deployment as a last-resort recovery option if the primary Guardian multisig is compromised during the bootstrapping period. The Backup is a 4-of-5 multisig and can only act within the first 180 days."
+    },
+    "tokenomics": {
+      "title": "Tokenomics (Detailed)",
+      "p1": "Total supply is fixed and non-inflationary, with a hard cap of 3,000,000,000 VALA enforced at the token contract level. VALA is minted once at deployment and held in protocol escrow to enforce on-chain lockups and governance-controlled releases. VALA functions as the primary economic unit across the Valaskar ecosystem.",
+      "allocations": [
+        { "pct": "25%", "name": "Pioneer Rewards", "amount": "750,000,000 VALA", "desc": "Split equally across all 10,000 Passports (75,000 VALA each). Linear vesting over 12 months from activation. Claim-only via smart contract." },
+        { "pct": "16%", "name": "Team Allocation", "amount": "480,000,000 VALA", "desc": "Locked in a TeamVesting contract. 12-month cliff followed by 36-month linear release. Only the designated team treasury can claim." },
+        { "pct": "12%", "name": "Public Sale + Liquidity", "amount": "360,000,000 VALA", "desc": "Sale tranche: 240M VALA. Liquidity/MM tranche: 120M VALA. Locked for 30 days. Movements executed only under DAO or guardian controls." },
+        { "pct": "47%", "name": "DAO Treasury", "amount": "1,410,000,000 VALA", "desc": "Locked for 180 days from launch. Governance-gated with proposed 10-year on-chain vesting. Reserved for in-game rewards, creator grants, tournaments, and ecosystem growth." }
+      ]
+    },
+    "publicSale": {
+      "title": "Public Token Sale Proceeds (IDO)",
+      "p1": "When the protocol receives Public Sale funds, it splits them immediately. A portion is used to add liquidity to the VALA/USDC pool, and the remainder is allocated to the DAO and team under their respective controls.",
+      "splits": [
+        "50% → LP provisioning (VALA:USDC AMM)",
+        "20% → DAO Treasury",
+        "30% → Team Treasury (development)"
+      ],
+      "p2": "If the Sale tranche is fully sold (240,000,000 VALA at $0.005 per VALA), total proceeds would be $1,200,000, split as: $600,000 LP provisioning, $240,000 DAO Treasury, $360,000 Team Treasury."
+    },
+    "nftSale": {
+      "title": "NFT Sale Proceeds (ETH)",
+      "p1": "Passport NFT sale proceeds are split by the protocol at receipt: the portion routed to the DAO ETH Treasury is controlled by Passport holders and may be used only via on-chain governance. Each individual mint payment is split atomically within the same transaction.",
+      "splits": [
+        "50% → Team Treasury",
+        "50% → DAO ETH Treasury (locked 120 days, extendable)"
+      ],
+      "p2": "If all 10,000 NFTs sell at 0.08 ETH each: total raised 800 ETH (~$2,560,000), with 400 ETH (~$1,280,000) to DAO and 400 ETH (~$1,280,000) to Team."
+    },
+    "gameplayLoop": {
+      "title": "Gameplay Loop and Economic Cycle (MVP)",
+      "p1": "Each Valaskar NFT grants the right to operate one playable Land with configuration parameters bounded by DAO rules. The MVP economy is built around spending VALA within the protocol rather than minting or earning VALA in-game.",
+      "items": [
+        "The player spends VALA to enter a Land and to perform in-game actions.",
+        "The MVP economy is spend-based: VALA is used within the protocol, and the MVP does not include protocol-funded VALA emissions or in-game earning/minting.",
+        "The protocol architecture anticipates fee routing between the Land Owner and the DAO Treasury, but routing is not implemented in the MVP.",
+        "The DAO Treasury funds development, operations, ecosystem incentives, and liquidity programs strictly through governance decisions."
+      ],
+      "p2": "Long-term, the DAO Treasury is intended to migrate from L1 to an Ethereum-compatible L2 treasury module (e.g., Polygon), subject to DAO approval, to reduce operational costs and enable higher-frequency game-driven distributions."
+    },
+    "valaUtility": {
+      "title": "VALA Utility and Demand Drivers",
+      "p1": "VALA does not grant governance rights. VALA is designed as a non-governance utility token required for ongoing in-game and protocol-level activity, with demand driven by usage rather than token emissions.",
+      "items": [
+        "Land entry payments (entry fees and/or time-based access) set by Land Owners within DAO-defined caps.",
+        "Crafting, upgrading, and repairing items (consumptive sinks).",
+        "Marketplace fees (listing and/or settlement) denominated in VALA.",
+        "Land Owner operational fees (\"Land Keep-Alive\" / hosting allowance) payable in VALA to the DAO Treasury.",
+        "Optional services such as events, tournaments, and cosmetic unlocks denominated in VALA."
+      ],
+      "p2": "All VALA utility parameters, caps, and fee rules are subject to DAO governance and may evolve over time. No guarantees are made regarding demand levels, usage frequency, or economic outcomes."
+    },
+    "security": {
+      "title": "Security and Risk Considerations",
+      "p1": "Valaskar uses a conservative, safety-first governance model. Key risks include:",
+      "risks": [
+        "Smart contract risk: Deployed contracts are immutable and can contain undiscovered bugs.",
+        "Upgrade / configuration risk: Protocol parameters can be changed via governance.",
+        "Governance capture risk: NFT-based voting can be influenced by large holders or coordinated voting blocs.",
+        "Bootstrap role risk: Privileged roles (guardian) increase centralization surfaces during early-stage operations.",
+        "Operational security risk: Key loss, signer compromise, or coordination failures can delay or block critical actions.",
+        "L2 / bridging risk: Future L2 execution or bridges introduce additional attack surfaces and finality assumptions.",
+        "Economic and market risk: Token and NFT prices are volatile; liquidity may be thin."
+      ],
+      "p2": "Risk mitigation steps include timelock execution delays, guardian veto with explicit protection rules, strong participation thresholds for sensitive actions, monitoring and operational playbooks. A formal security audit is planned in Phase 2 before the IDO."
+    },
+    "roadmapSection": {
+      "title": "Roadmap",
+      "intro": "The protocol is already live. The roadmap below is indicative and may change based on DAO decisions, technical constraints, and community priorities.",
+      "colQuarter": "Quarter",
+      "colPhase": "Phase",
+      "colTitle": "Title",
+      "colScope": "Scope",
+      "phases": [
+        { "quarter": "Q1 2026", "phase": "0", "name": "Foundation", "scope": "Guardian mint, timelock hardening, docs" },
+        { "quarter": "Q2 2026", "phase": "1", "name": "Distribution", "scope": "NFT minting/activations, governance onboarding" },
+        { "quarter": "Q3 2026", "phase": "2", "name": "IDO / Audit", "scope": "Audit, public token sale (IDO) and initial liquidity program" },
+        { "quarter": "Q4 2026", "phase": "3", "name": "Game Pre-Production", "scope": "Core game design, VALA economy design" },
+        { "quarter": "Q1 2027", "phase": "4", "name": "L2 / Bridge & Scaling", "scope": "VALA BRIDGE / L2 HUB design and deployment (DAO-approved)" },
+        { "quarter": "Q2 2027", "phase": "5", "name": "Ecosystem Infrastructure", "scope": "Marketplace MVP, VALA Wallet, governance ops UI" },
+        { "quarter": "Q3 2027", "phase": "6", "name": "VALA Studio & Demo", "scope": "Creator tools MVP, demo version and game trailers" },
+        { "quarter": "Q4 2027", "phase": "7", "name": "Alpha / Beta", "scope": "Alpha and Beta versions of Valaskar on PC" },
+        { "quarter": "Q1 2028", "phase": "8", "name": "Launch", "scope": "Valaskar launch on Steam" }
+      ]
+    },
+    "keyFacts": {
+      "title": "Key Facts (Summary)",
+      "items": [
+        "Fixed supply: 3,000,000,000 VALA.",
+        "VALA allocation: 25% Pioneer Rewards (NFT Holders), 16% Team, 12% Public Sale, 47% DAO Treasury.",
+        "Pioneer Rewards allocation is equal per NFT across 10,000 Passports, with 12-month linear vesting from activation; each Passport receives 75,000 VALA.",
+        "NFT supply is fixed at 10,000.",
+        "Each NFT = 1 governance vote.",
+        "VALA token does not grant votes.",
+        "VALA is planned as the in-game currency.",
+        "Admin mint cap is 200 NFTs (2% of the NFT supply); the remaining 98% are available via public mint.",
+        "Governance thresholds: proposal 25 votes; quorum max(5% supply, 100). Sensitive actions require ≥300 For-votes and ≥300 participation quorum."
+      ]
+    },
+    "controlMatrix": {
+      "title": "Governance & Custody Control Matrix",
+      "intro": "An overview of which roles control which governance and custody surfaces:",
+      "colAction": "Surface / Action",
+      "rows": [
+        { "action": "Release Liquidity", "dao": "Yes (sensitive)", "guardian": "Yes", "backup": "No" },
+        { "action": "Release DAO Reserve", "dao": "Yes", "guardian": "No", "backup": "No" },
+        { "action": "Withdraw DAO ETH", "dao": "Yes", "guardian": "No", "backup": "No" },
+        { "action": "Extend Locks", "dao": "Yes", "guardian": "No", "backup": "No" },
+        { "action": "Allowlist Management", "dao": "Yes", "guardian": "No", "backup": "No" },
+        { "action": "Pause / Unpause DAO Ops", "dao": "Yes", "guardian": "Yes", "backup": "No" },
+        { "action": "Recover ERC20", "dao": "Yes", "guardian": "No", "backup": "No" },
+        { "action": "NFT Sale Controls", "dao": "Yes", "guardian": "Yes (parallel)", "backup": "No" },
+        { "action": "NFT Metadata Controls", "dao": "Yes", "guardian": "setBaseURI", "backup": "No" },
+        { "action": "Guardian Veto", "dao": "No", "guardian": "Yes", "backup": "No" },
+        { "action": "Guardian Rotation", "dao": "Yes (proposal)", "guardian": "No", "backup": "No" },
+        { "action": "Emergency Guardian Rotation", "dao": "No", "guardian": "No", "backup": "Yes (window)" },
+        { "action": "Timelock Execution", "dao": "Yes (schedules)", "guardian": "No", "backup": "No" },
+        { "action": "Pioneer Vesting Actions", "dao": "Yes (recover)", "guardian": "No", "backup": "No" },
+        { "action": "Team Vesting Actions", "dao": "Yes (rotate)", "guardian": "No", "backup": "No" }
+      ]
+    },
+    "implementation": {
+      "title": "Implementation Status Matrix",
+      "colComponent": "Component",
+      "colStatus": "Status",
+      "colWhere": "Where",
+      "rows": [
+        { "component": "VALA ERC-20", "status": "Live (On-chain)", "where": "Ethereum Mainnet" },
+        { "component": "ValaskarNFT (ERC-721)", "status": "Live (On-chain)", "where": "Ethereum Mainnet" },
+        { "component": "Governor", "status": "Live (On-chain)", "where": "Ethereum Mainnet" },
+        { "component": "Timelock", "status": "Live (On-chain)", "where": "Ethereum Mainnet" },
+        { "component": "Pioneer Vesting", "status": "Live (On-chain)", "where": "Ethereum Mainnet" },
+        { "component": "Team Vesting", "status": "Live (On-chain)", "where": "Ethereum Mainnet" },
+        { "component": "DAO Treasury Vesting (10-year)", "status": "Planned", "where": "Future on-chain" },
+        { "component": "Fee Routing", "status": "Planned", "where": "Future on-chain" },
+        { "component": "Game Economy", "status": "Planned", "where": "Future on-chain" },
+        { "component": "Game Client / Maps", "status": "Planned", "where": "Future" },
+        { "component": "VALA Studio", "status": "Planned", "where": "Future off-chain" },
+        { "component": "Marketplace / Sinks", "status": "Planned", "where": "Future on-chain" },
+        { "component": "VALA Bridge / L2 Hub", "status": "Planned", "where": "Ethereum ↔ L2" },
+        { "component": "VALA Wallet", "status": "Planned", "where": "Future" },
+        { "component": "Governance Monitoring", "status": "Planned", "where": "Future" }
+      ]
+    },
+    "glossary": {
+      "title": "Glossary",
+      "items": [
+        { "term": "AMM", "def": "Automated Market Maker — on-chain liquidity pool used for swaps." },
+        { "term": "ERC-20", "def": "Standard fungible token interface." },
+        { "term": "ERC-20 Permit", "def": "ERC-20 extension that allows approvals via signed messages." },
+        { "term": "ERC-721", "def": "Standard non-fungible token interface." },
+        { "term": "ERC-721 Votes", "def": "ERC-721 extension that enables delegation and on-chain voting power." },
+        { "term": "DAO", "def": "Decentralized Autonomous Organization; governance decisions are executed on-chain via the timelock." },
+        { "term": "Timelock", "def": "On-chain executor for DAO-approved actions; enforces a delay before execution." },
+        { "term": "Guardian", "def": "Multisig with veto power and other explicitly granted on-chain privileges." },
+        { "term": "Guardian Backup", "def": "Emergency role (first 180 days) to rotate guardian/backup on the Governor." },
+        { "term": "Sensitive Actions", "def": "Operations with elevated voting thresholds (releases, lock extensions, ETH withdrawals, recovery, transfer ownership)." },
+        { "term": "Allowlist", "def": "On-chain list of approved recipients for releases/withdrawals." },
+        { "term": "IDO", "def": "Initial DEX Offering — public token sale via AMM or DEX." },
+        { "term": "LP", "def": "Liquidity Provider — supplies assets to an AMM pool." },
+        { "term": "Quorum", "def": "Minimum participation required for a vote to be valid." },
+        { "term": "Passport", "def": "ValaskarNFT land token that grants voting power." },
+        { "term": "Pioneer", "def": "Early participant allocation vested by NFT activation." },
+        { "term": "Unreal Engine 5", "def": "Game engine used for the planned Valaskar client." }
+      ]
+    },
+    "disclaimer": {
+      "title": "Disclaimer",
+      "paragraphs": [
+        "No advice / informational only. This document is for informational purposes only and does not constitute financial, investment, legal, tax, or accounting advice. You should consult your own professional advisers before taking any action.",
+        "No offer or solicitation. Nothing in this document constitutes an offer to sell, or a solicitation of an offer to buy, any token, NFT, security, or other asset, nor a recommendation to participate in any transaction.",
+        "High risk / no guarantees. Digital assets are highly volatile and risky. Any participation in Valaskar may result in partial or total loss. No representations or warranties are made regarding token price, liquidity, demand, adoption, utility, or any outcomes.",
+        "Protocol and smart contract risks. Using the Protocol involves significant technical risks, including smart contract bugs, exploits, economic attacks, oracle/bridge failures, network congestion, and other failures. The Protocol may be upgraded, paused, restricted, or discontinued.",
+        "Governance risk. Protocol parameters, treasury actions, and roadmap decisions may be determined by governance and can change materially, including in ways that negatively affect users.",
+        "Forward-looking statements. Any statements about future features, timelines, targets, or projections are forward-looking and subject to change. Actual results may differ materially.",
+        "Regulatory uncertainty / eligibility. Laws and regulations for digital assets vary by jurisdiction and may change. You are solely responsible for ensuring you are legally permitted to participate."
+      ]
+    },
+    "contractAddresses": {
+      "title": "Appendix: Contract Addresses",
+      "mainnet": [
+        { "name": "VALA ERC-20", "address": "0x5EB163fe1A9EC7660f2DAc2C685Ea5633459ef88" },
+        { "name": "ValaskarNFT (ERC-721)", "address": "0x0395d6a10C1847D25721c5D30C230a0544376B0D" },
+        { "name": "Governor", "address": "0x7bBBee1082B52DEF3dCe244483F40af152F776C7" },
+        { "name": "Timelock", "address": "0x8f1169247Fe8230bc76A5Ac151F9Ef9d82078d85" },
+        { "name": "Pioneer Vesting", "address": "0xAa785831AaE2eDcC532e8f997aeD96BFa0c9cA8e" },
+        { "name": "Team Vesting", "address": "0xB295225a6267313fF2667Cc53f6AF083d2C95CC2" }
+      ],
+      "sepolia": [
+        { "name": "VALA ERC-20", "address": "0x1ABaf2df0322Dd282abE6cE401DC5f81Ab625cE9" },
+        { "name": "ValaskarNFT (ERC-721)", "address": "0x900c223e11e7f9dB9F73aD5CF74aaF2A5445319C" },
+        { "name": "Governor", "address": "0xebB721966DF1D2A9200B2046C4E7f07eCe696CF3" },
+        { "name": "Timelock", "address": "0xe06bD97Dac137CC927dDF08D5b488867A65139A5" },
+        { "name": "Pioneer Vesting", "address": "0xaDa6b30E238e9DF1a721253a6dC9F31738e42488" },
+        { "name": "Team Vesting", "address": "0x6892FA6543928d2B480f8D294bDBE226094eE521" }
+      ]
+    }
   },
   "footer": {
     "tagline": "탈중앙화 가상 세계. 10,000개 토지. 하나의 플래그십 게임.",

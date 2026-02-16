@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import "../globals.css";
-import FooterLogo from "../components/FooterLogo";
 import ScrollBehavior from "../components/ScrollBehavior";
-import ValaskarLogo from "../components/ValaskarLogo";
-import LanguageSwitcher from "../components/LanguageSwitcher";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import { i18n, type Locale } from "../i18n/config";
 import { getDictionary } from "../i18n/get-dictionary";
 
@@ -42,96 +41,16 @@ export default async function LocaleLayout({
   const dict = await getDictionary(locale);
 
   return (
-    <html lang={locale}>
-      <body>
-        <ScrollBehavior />
-
-        <header className="header">
-          <div className="container header-inner">
-            <a href="#hero" className="logo">
-              <ValaskarLogo />
-              <span>Valaskar</span>
-            </a>
-            <nav className="nav nav-main">
-              <a href="#about">{dict.nav.about}</a>
-              <a href="#tokenomics">{dict.nav.tokenomics}</a>
-              <a href="#passport">{dict.nav.passports}</a>
-              <a href="#governance">{dict.nav.governance}</a>
-              <a href="#roadmap">{dict.nav.roadmap}</a>
-              <a href="#faq">{dict.nav.faq}</a>
-            </nav>
-
-            <nav className="nav nav-secondary">
-              <a href="#hero">{dict.nav.home}</a>
-              <a href="#about">{dict.nav.about}</a>
-              <a href="#tokenomics">{dict.nav.tokenomics}</a>
-              <a href="#passport">{dict.nav.passports}</a>
-              <a href="#governance">{dict.nav.governance}</a>
-              <a href="#roadmap">{dict.nav.roadmap}</a>
-              <a href="#faq">{dict.nav.faq}</a>
-            </nav>
-
-            <div className="header-actions">
-                <a href="#passport" className="btn btn-primary btn-sm">
-                    {dict.nav.getPassport}
-                </a>
-                <LanguageSwitcher locale={locale} />
-
-            </div>
-          </div>
-
-          <div className="container header-secondary">
-            <nav className="nav nav-secondary">
-              <a href="#hero">{dict.nav.home}</a>
-              <a href="#about">{dict.nav.about}</a>
-              <a href="#tokenomics">{dict.nav.tokenomics}</a>
-              <a href="#passport">{dict.nav.passports}</a>
-              <a href="#governance">{dict.nav.governance}</a>
-              <a href="#roadmap">{dict.nav.roadmap}</a>
-              <a href="#faq">{dict.nav.faq}</a>
-            </nav>
-          </div>
-        </header>
-        <main>
-          <div className="hero-bg" />
-          {children}
-        </main>
-        {/* Footer */}
-        <footer className="footer">
-          <div className="container">
-            <div className="footer-inner">
-              <div className="footer-brand">
-                <a href="#hero" className="logo">
-                  <FooterLogo />
-                  <span>Valaskar</span>
-                </a>
-                <p className="footer-tagline">{dict.footer.tagline}</p>
-              </div>
-              <div className="footer-links">
-                <div className="footer-col">
-                  <h4>{dict.footer.protocol}</h4>
-                  <a href="#about">{dict.footer.about}</a>
-                  <a href="#features">{dict.footer.ecosystem}</a>
-                  <a href="#tokenomics">{dict.footer.tokenomics}</a>
-                  <a href="#governance">{dict.footer.governance}</a>
-                </div>
-                <div className="footer-col">
-                  <h4>{dict.footer.resources}</h4>
-                  <a href="/white-paper.pdf" target="_blank">
-                    {dict.footer.whitePaper}
-                  </a>
-                  <a href="#roadmap">{dict.footer.roadmap}</a>
-                  <a href="#faq">{dict.footer.faq}</a>
-                  <a href="#contracts">{dict.footer.contracts}</a>
-                </div>
-              </div>
-            </div>
-            <div className="footer-bottom">
-              <p>{dict.footer.disclaimer}</p>
-            </div>
-          </div>
-        </footer>
-      </body>
-    </html>
+    <>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `document.documentElement.lang = '${locale}';`,
+        }}
+      />
+      <ScrollBehavior />
+        
+        {children}  
+        <Footer dict={dict.footer} />
+    </>
   );
 }

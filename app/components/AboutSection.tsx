@@ -24,8 +24,8 @@ export default function AboutSection({ dict }: { dict: Dictionary["about"] }) {
               <span className="stat-label">{dict.statPlayersPerLand}</span>
             </div>
             <div className="stat-card">
-              <span className="stat-number">16 km&sup2;</span>
-              <span className="stat-label">{dict.statPerLand}</span>
+              <span className="stat-number">VALA</span>
+              <span className="stat-label">{dict.statNativeGameCurrency}</span>
             </div>
             <div className="stat-card">
               <span className="stat-number">200+</span>

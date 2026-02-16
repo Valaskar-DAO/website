@@ -9,6 +9,7 @@ import GovernanceSection from "../components/GovernanceSection";
 import RoadmapSection from "../components/RoadmapSection";
 import FAQSection from "../components/FAQSection";
 import ContractsSection from "../components/ContractsSection";
+import Header from "../components/Header";
 
 export default async function Home({
   params,
@@ -19,17 +20,21 @@ export default async function Home({
   const locale = localeParam as Locale;
   const dict = await getDictionary(locale);
 
-  return (
-    <>
-      <HeroSection dict={dict.hero} />
-      <AboutSection dict={dict.about} />
-      <ProductsSection dict={dict.products} />
-      <TokenomicsSection dict={dict.tokenomics} />
-      <PassportSection dict={dict.passport} />
-      <GovernanceSection dict={dict.governance} />
-      <RoadmapSection dict={dict.roadmap} />
-      <FAQSection dict={dict.faq} />
-      <ContractsSection dict={dict.contracts} />
-    </>
+  return ( 
+    <> 
+      <Header dict={dict.nav} locale={locale} /> 
+      <main>
+        <div className="hero-bg" />
+        <HeroSection dict={dict.hero} />
+        <AboutSection dict={dict.about} />
+        <ProductsSection dict={dict.products} />
+        <TokenomicsSection dict={dict.tokenomics} />
+        <PassportSection dict={dict.passport} />
+        <GovernanceSection dict={dict.governance} />
+        <RoadmapSection dict={dict.roadmap} />
+        <FAQSection dict={dict.faq} />
+        <ContractsSection dict={dict.contracts} />
+      </main> 
+    </> 
   );
 }

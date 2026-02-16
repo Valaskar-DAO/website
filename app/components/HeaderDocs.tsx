@@ -1,0 +1,34 @@
+import type { Dictionary } from "../i18n/get-dictionary";
+import type { Locale } from "../i18n/config";
+import ValaskarLogo from "./ValaskarLogo";
+import LanguageSwitcher from "./LanguageSwitcher";
+
+export default function HeaderDocs({ 
+  dict, 
+  locale 
+}: { 
+  dict: Dictionary["nav"]; 
+  locale: Locale;
+}) {
+  return (
+        <header className="header">
+          <div className="container header-inner">
+            <a href="#hero" className="logo">
+              <ValaskarLogo />
+              <span>Valaskar</span>
+            </a>
+            
+
+            <div className="header-actions">
+                <a href="#passport" className="btn btn-primary btn-sm">
+                    {dict.getPassport}
+                </a>
+                <LanguageSwitcher locale={locale} />
+
+            </div>
+          </div>
+
+         
+        </header>
+  );
+}
