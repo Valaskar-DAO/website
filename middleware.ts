@@ -8,7 +8,7 @@ const ALLOWED_IPS = [
 export function middleware(request: NextRequest) {
   const ip =
     request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
-    request.ip ||
+    request.headers.get('x-real-ip') ||
     '';
 
   if (!ALLOWED_IPS.includes(ip)) {
@@ -18,7 +18,7 @@ export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   const pathnameHasLocale = i18n.locales.some(
-    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`)
+    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   );
 
   if (pathnameHasLocale) return;
