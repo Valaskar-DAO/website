@@ -2,7 +2,9 @@ import { NextRequest, NextResponse } from 'next/server';
 import { i18n } from './app/i18n/config';
 
 const ALLOWED_IPS = [
-  '31.146.53.186', 
+  '127.0.0.1',
+  '::1',
+  '31.146.53.186',
 ];
 
 export function middleware(request: NextRequest) {
