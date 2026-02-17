@@ -11,10 +11,6 @@ Official website for **Valaskar** — a decentralized virtual world of 10,000 in
 
 ## Getting Started
 
-```bash
-npm install
-npm run dev
-```
 
 Open [http://localhost:3000](http://localhost:3000).
 
