@@ -12,7 +12,8 @@
     "faq": "FAQ",
     "home": "Startseite",
     "backToHome": "Zurück zur Startseite",
-    "getPassport": "Pass erhalten"
+    "getPassport": "Pass erhalten",
+    "connectWallet": "Wallet verbinden"
   },
   "hero": {
     "titleLine1": "Besitze Land. Regiere Welten.",

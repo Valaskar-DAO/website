@@ -12,7 +12,8 @@
     "faq": "FAQ",
     "home": "Home",
     "backToHome": "Back to Home",
-    "getPassport": "Get Passport"
+    "getPassport": "Get Passport",
+    "connectWallet": "Connect Wallet"
   },
   "hero": {
     "titleLine1": "Own Land. Rule Worlds.",

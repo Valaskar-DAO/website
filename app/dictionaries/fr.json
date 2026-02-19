@@ -12,7 +12,8 @@
     "faq": "FAQ",
     "home": "Accueil",
     "backToHome": "Retour à l'Accueil",
-    "getPassport": "Obtenir un Passeport"
+    "getPassport": "Obtenir un Passeport",
+    "connectWallet": "Connecter le Portefeuille"
   },
   "hero": {
     "titleLine1": "Possédez des Terres. Gouvernez des Mondes.",

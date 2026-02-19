@@ -12,7 +12,8 @@
     "faq": "常见问题",
     "home": "首页",
     "backToHome": "返回首页",
-    "getPassport": "获取护照"
+    "getPassport": "获取护照",
+    "connectWallet": "连接钱包"
   },
   "hero": {
     "titleLine1": "拥有土地。统治世界。",

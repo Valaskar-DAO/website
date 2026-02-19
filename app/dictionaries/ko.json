@@ -12,7 +12,8 @@
     "faq": "FAQ",
     "home": "홈",
     "backToHome": "홈으로 돌아가기",
-    "getPassport": "패스포트 받기"
+    "getPassport": "패스포트 받기",
+    "connectWallet": "지갑 연결"
   },
   "hero": {
     "titleLine1": "토지를 소유하라. 세계를 지배하라.",

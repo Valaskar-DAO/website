@@ -12,7 +12,8 @@
     "faq": "FAQ",
     "home": "ホーム",
     "backToHome": "ホームに戻る",
-    "getPassport": "パスポートを取得"
+    "getPassport": "パスポートを取得",
+    "connectWallet": "ウォレットを接続"
   },
   "hero": {
     "titleLine1": "土地を所有し、世界を支配せよ。",

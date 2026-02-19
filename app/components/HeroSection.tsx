@@ -4,6 +4,8 @@ import type { Dictionary } from "../i18n/get-dictionary";
 export default function HeroSection({ dict }: { dict: Dictionary["hero"] }) {
   return (
     <section className="hero" id="hero">
+      <div className="green-shaddow1"/>
+      <div className="green-shaddow211"/>
       <div className="container">
         <div className="hero-content">
           <h1 data-aos="fade-down" data-aos-delay="100">

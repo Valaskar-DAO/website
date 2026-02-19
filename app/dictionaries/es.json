@@ -12,7 +12,9 @@
     "faq": "FAQ",
     "home": "Inicio",
     "backToHome": "Volver al Inicio",
-    "getPassport": "Obtener Pasaporte"
+    "getPassport": "Obtener Pasaporte",
+    "connectWallet": "Conectar Billetera"
+
   },
   "hero": {
     "titleLine1": "Posee Tierras. Gobierna Mundos.",
