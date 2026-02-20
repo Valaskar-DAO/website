@@ -37,7 +37,7 @@ export default function Header({
             </nav>
 
             <div className="header-actions">
-                <a href="#passport" className="btn btn-primary btn-sm">
+                <a href="/map" className="btn btn-primary btn-sm">
                     {dict.getPassport}
                 </a>
                 <LanguageSwitcher locale={locale} />
