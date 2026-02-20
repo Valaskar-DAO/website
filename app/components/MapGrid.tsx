@@ -22,6 +22,7 @@ interface CellData {
 // Generate random cell data for demonstration
 function generateCellData(): Map<string, CellData> {
   const cells = new Map<string, CellData>();
+  
   const statuses: CellStatus[] = ["available", "owned", "premium" ];
 
   for (let x = 0; x < GRID_SIZE; x++) {
