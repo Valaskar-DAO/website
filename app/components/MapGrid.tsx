@@ -89,7 +89,7 @@ export default function MapGrid() {
     // Create map with simple CRS (pixel coordinates)
     const map = L.map(mapRef.current, {
       crs: L.CRS.Simple,
-      minZoom: 1,
+      minZoom: 2,
       maxZoom: 8,
       zoomSnap: 0.25,
       zoomDelta: 0.5,
