@@ -19,7 +19,7 @@ export default async function WhitePaperPage({
 
             <div className="hero-bg" />
 
-            <section className="section" id="tokenomics">
+            <section className="section" id="map-section">
               <div className="container">
                 <div className="map">
                   <MapGridWrapper />
