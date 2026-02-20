@@ -9,7 +9,7 @@ const CELL_SIZE = 1; // each cell is 1x1 unit
 const MAP_SIZE = GRID_SIZE * CELL_SIZE; // total map size in units
 
 // Cell status types
-type CellStatus = "available" | "owned" | "premium" | "reserved";
+type CellStatus = "available" | "owned" | "premium";
 
 interface CellData {
   x: number;
@@ -22,13 +22,13 @@ interface CellData {
 // Generate random cell data for demonstration
 function generateCellData(): Map<string, CellData> {
   const cells = new Map<string, CellData>();
-  const statuses: CellStatus[] = ["available", "owned", "premium", "reserved"];
+  const statuses: CellStatus[] = ["available", "owned", "premium" ];
 
   for (let x = 0; x < GRID_SIZE; x++) {
     for (let y = 0; y < GRID_SIZE; y++) {
       const key = `${x},${y}`;
       const rand = Math.random();
-      let status: CellStatus;
+      let status: CellStatus = "available";
 
       if (rand < 0.55) {
         status = "available";
@@ -36,8 +36,6 @@ function generateCellData(): Map<string, CellData> {
         status = "owned";
       } else if (rand < 0.93) {
         status = "premium";
-      } else {
-        status = "reserved";
       }
 
       cells.set(key, {
@@ -53,17 +51,15 @@ function generateCellData(): Map<string, CellData> {
 }
 
 const STATUS_COLORS: Record<CellStatus, string> = {
-  available: "#2a2a3e",
-  owned: "#6366f1",
-  premium: "#f59e0b",
-  reserved: "#475569",
+  available: "#253b37",
+  owned: "#00715c",
+  premium: "rgb(170, 146, 69)",
 };
 
 const STATUS_LABELS: Record<CellStatus, string> = {
   available: "Available",
   owned: "Owned",
   premium: "Premium",
-  reserved: "Reserved",
 };
 
 export default function MapGrid() {

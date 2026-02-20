@@ -16,7 +16,8 @@ export default async function WhitePaperPage({
     <>
         <HeaderDocs dict={dict.nav} locale={locale} /> 
         <main> 
-                  <div className="hero-bg" />
+
+            <div className="hero-bg" />
 
             <section className="section" id="tokenomics">
               <div className="container">
@@ -24,6 +25,7 @@ export default async function WhitePaperPage({
                   <MapGridWrapper />
                 </div>
               </div>
+            
             </section> 
         </main>  
     </>
