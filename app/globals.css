@@ -2247,9 +2247,9 @@ mark.docs-search-highlight {
 /* Tooltip */
 .map-tooltip {
     position: absolute;
-    background: rgba(15, 15, 35, 0.95);
-    backdrop-filter: blur(8px);
+    background: #111111;
     border: 1px solid #122320;
+    backdrop-filter: blur(8px); 
     border-radius: 8px;
     padding: 8px 12px;
     z-index: 1000;
@@ -2300,9 +2300,9 @@ mark.docs-search-highlight {
     top: 80px;
     right: 60px;
     width: 280px;
-    background: rgba(15, 15, 35, 0.95);
     backdrop-filter: blur(16px);
-    border: 1px solid rgba(99, 102, 241, 0.25);
+    background: #111111;
+    border: 1px solid #122320;
     border-radius: 14px;
     padding: 20px;
     z-index: 1000;
@@ -2374,8 +2374,8 @@ mark.docs-search-highlight {
     width: 100%;
     margin-top: 18px;
     padding: 12px;
-    background: linear-gradient(135deg, #6366f1, #8b5cf6);
-    color: #fff;
+    background: #fff;
+    color: #000;
     border: none;
     border-radius: 10px;
     font-size: 14px;
@@ -2385,10 +2385,8 @@ mark.docs-search-highlight {
     letter-spacing: 0.5px;
 }
 
-.btn-buy:hover {
-    background: linear-gradient(135deg, #7c7fff, #a78bfa);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3);
+.btn-buy:hover { 
+    transform: translateY(-1px); 
 }
 
 
