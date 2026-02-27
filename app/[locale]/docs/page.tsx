@@ -3,6 +3,8 @@ import { getDictionary } from "../../i18n/get-dictionary";
 import WhitePaperSidebar from "../../components/WhitePaperSidebar";
 import WhitePaperContent from "../../components/WhitePaperContent";
 import HeaderDocs from "../../components/HeaderDocs";
+import Footer from "@/app/components/Footer";
+
 
 export default async function WhitePaperPage({
   params,
@@ -24,7 +26,8 @@ export default async function WhitePaperPage({
               <WhitePaperContent dict={dict.whitePaper} />
             </article>
           </div>
-        </main>  
+        </main> 
+         <Footer dict={dict.footer} /> 
     </>
    );
 }

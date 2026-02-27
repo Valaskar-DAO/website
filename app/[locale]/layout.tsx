@@ -51,7 +51,7 @@ export default async function LocaleLayout({
         <AOSInit />
         
         {children}  
-        <Footer dict={dict.footer} />
+        
     </>
   );
 }

@@ -10,6 +10,7 @@ import RoadmapSection from "../components/RoadmapSection";
 import FAQSection from "../components/FAQSection";
 import ContractsSection from "../components/ContractsSection";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default async function Home({
   params,
@@ -34,6 +35,7 @@ export default async function Home({
         <RoadmapSection dict={dict.roadmap} />
         <FAQSection dict={dict.faq} />
         <ContractsSection dict={dict.contracts} />
+         <Footer dict={dict.footer} />
       </main> 
     </> 
   );

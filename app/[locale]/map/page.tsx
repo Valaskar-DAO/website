@@ -13,21 +13,11 @@ export default async function WhitePaperPage({
   const dict = await getDictionary(locale);
 
   return ( 
-    <>
-        <HeaderDocs dict={dict.nav} locale={locale} /> 
-        <main> 
-
-            <div className="hero-bg" />
-
-            <section className="section" id="map-section">
-              <div className="container">
+    <>  
+ 
                 <div className="map">
                   <MapGridWrapper />
-                </div>
-              </div>
-            
-            </section> 
-        </main>  
+                </div> 
     </>
    );
 }
