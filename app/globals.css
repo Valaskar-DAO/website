@@ -777,8 +777,7 @@ main {
 
 .roadmap-item {
     display: flex;
-    gap: 24px;
-    margin-bottom: 32px;
+    gap: 24px; 
     position: relative;
 }
 
@@ -800,16 +799,21 @@ main {
     box-shadow: 0 0 10px rgb(255 255 255 / 50%);
 }
 
-.roadmap-item.active::after {
+.roadmap-item.active .roadmap-content:after {
     content: '';
     position: absolute;
     left: -25px;
-    bottom: 65px;
+    top: 10px;
     width: 1.5px;
-    height: 109px;
+    height: 100%;
     background: #ffffff;
     border-color: #ffffff;
 }
+
+.roadmap-item .roadmap-content {
+    padding-bottom: 25px;
+}
+
 
 .roadmap-item:first-child.active::after {
     display: none;
@@ -835,6 +839,11 @@ main {
 
 .roadmap-item.active .roadmap-date {
     color: #fff;
+}
+
+roadmap-content{ 
+    position: relative;
+    padding-bottom: 20px;
 }
 
 .roadmap-content h4 {
