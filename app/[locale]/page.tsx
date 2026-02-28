@@ -11,6 +11,7 @@ import FAQSection from "../components/FAQSection";
 import ContractsSection from "../components/ContractsSection";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import StarsIcon from "../components/StarsIcon";
 
 export default async function Home({
   params,
@@ -25,7 +26,9 @@ export default async function Home({
     <> 
       <Header dict={dict.nav} locale={locale} /> 
       <main>
-        <div className="hero-bg" />
+        <div className="hero-bg" >
+          <StarsIcon />
+        </div>
         <HeroSection dict={dict.hero} />
         <AboutSection dict={dict.about} />
         <ProductsSection dict={dict.products} />

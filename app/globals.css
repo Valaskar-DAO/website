@@ -311,6 +311,15 @@ main {
     overflow: hidden;
 }
 
+.hero-bg svg {
+              width: 800px;
+              rotate: 197deg;
+              opacity: .6;
+              position: absolute;
+              top: 41px;
+
+}
+
 .hero-bg::before {
     content: '';
     position: absolute;
